@@ -140,6 +140,7 @@ ai_motor_debug_state_deadlocks |  | false | sv, cheat
 ai_motor_debug_stop |  | false | sv, cheat
 ai_motor_debug_transitions |  | false | sv, cheat
 ai_motor_enable_move_heading_bad_zones |  | true | sv, cheat
+ai_motor_ground_enable_detailed_debug_data |  | false | sv, cheat
 ai_motor_max_state_time_active |  | 6 | sv, cheat
 ai_motor_move_direction_lookahead |  | 6 | sv, cheat
 ai_motor_nav_links_force_facing_time |  | 12 | sv, cheat
@@ -290,6 +291,10 @@ audio_enclosure_speed | Adjusts rate of change for enclosure value over time. | 
 audio_enemy_relevance_debug | Enable debug spheres and screen text for enemy relevance. | false | devonly, cl
 audio_enemy_relevance_targeting_range | Range to consider targeting local player. | 3500 | devonly, cl
 audio_health_change_damage_priority_threshold | Above this health fraction change damage audio is deprioritized in the sound system. | -0.02 | cl, cheat
+audio_health_delta_effect_release_rate | Rate of interpolation once hold time has elapsed. | 0.25 | devonly, cl
+audio_health_loss_effect_debug | Render health loss fraction change. | false | devonly, cl
+audio_health_loss_effect_enabled | Enable/disable health loss audio effect. | false | devonly, cl
+audio_health_loss_effect_hold_time | Rate of interpolation once hold time has elapsed. | 0.5 | devonly, cl
 audio_input_test_signal | For testing the audio input pathway with a sine tone instead of SDL3. | false | devonly
 audio_input_use_sdl_roles |  | false | devonly
 audio_limiter_debug | Renders limiter debug spheres and enables logging. | false | sv, cl, rep, cheat
@@ -648,8 +653,8 @@ citadel_brawl_hero_roster_banned | A comma separated list of hero IDs that hold 
 citadel_brawl_hero_roster_high_priority | A comma separated list of hero IDs that hold the currently high priority brawl roster heroes |  | cl, a, release
 citadel_brawl_hero_roster_preferred | A comma separated list of hero IDs that hold the currently preferred brawl roster heroes |  | cl, a, release
 citadel_brawl_hero_roster_random | Is the brawl hero roster set to random | false | cl, a, release
-citadel_breakable_prop_break_airtime |  | 0.6 | devonly, sv, rep
-citadel_breakable_prop_break_velocity |  | 400 | devonly, sv, rep
+citadel_breakable_prop_break_airtime |  | 0.6 | devonly, sv, cl, rep
+citadel_breakable_prop_break_velocity |  | 400 | devonly, sv, cl, rep
 citadel_breakable_prop_breakable_enabled |  | true | devonly, sv
 citadel_breakable_prop_initial_spawn_time_override | If positive, override initial spawn time (in seconds) for all breakable_prop camps | -1 | devonly, sv
 citadel_breakable_prop_respawn_spread | Spread the respawn of breakables out by this many seconds (perf) | 0.5 | devonly, sv, rep
@@ -780,12 +785,11 @@ citadel_crate_delivery_overtime_bonus |  | 50 | sv, cheat
 citadel_crate_disable_early_spawn |  |  | 
 citadel_crate_early_spawn_delay |  |  | 
 citadel_crate_early_to_trooper_spawn_delay |  |  | 
-citadel_crate_respawn_interval |  | 300 | sv, cheat
+citadel_crate_respawn_interval |  | 300 | sv, cl, rep, cheat
 citadel_crate_reward_base |  | 1300 | devonly, sv
 citadel_crate_reward_time_multiplier |  | 230 | devonly, sv
 citadel_crate_spawn_enabled |  | true | devonly, sv
-citadel_crate_spawn_initial_delay |  | 600 | sv, cheat
-citadel_create_test_time_warp | Create a time warp volume at your feet | cmd | sv, cheat
+citadel_crate_spawn_initial_delay |  | 600 | sv, cl, rep, cheat
 citadel_create_unit | \[hero_name \| none\] \[team\] - Creates an unit.  Pass 'my_hero' as hero_name to use your current hero | cmd | sv
 citadel_crosshair_clip_angle |  | 90 | devonly, cl
 citadel_crosshair_clip_bullet_gap |  | 0.5 | devonly, cl
@@ -902,6 +906,7 @@ citadel_dev_test_end_game_fake_time |  | 0 | devonly, sv, cl, rep
 citadel_dev_test_end_game_gold |  | 20000 | devonly, sv
 citadel_dev_test_endgame | Set the Map to test End game content | cmd | cl, cheat, release
 citadel_dev_test_endgame_server_cmd | Set the Map to test End game content | cmd | sv, cheat, release
+citadel_digger_debugburrow |  | false | devonly, sv
 citadel_disable_duplicate_heroes | Disable usage of Duplicate Heroes | cmd | sv, cheat, release
 citadel_disable_fast_cooldowns | Disable fast cooldowns | cmd | sv, cheat
 citadel_disable_fast_stamina | Disable fast stamina | cmd | sv, cheat
@@ -912,6 +917,7 @@ citadel_disable_unlimited_ammo | Disable unlimited ammo | cmd | sv, cheat
 citadel_display_new_player_recommendations | Do we want to show the decorations for new player friendly heroes? | true | cl, release
 citadel_distance_mouse_move_for_minimap_drawing |  | 15 | cl, release
 citadel_doorway_debug_draw |  | 0 | sv, cl, rep, cheat
+citadel_doorway_glow_close_distance |  | 200 | sv, cl, rep, cheat
 citadel_doorway_glow_other_distance |  | 1000 | sv, cl, rep, cheat
 citadel_doorway_infinite_duration |  | false | sv, cl, rep, cheat
 citadel_doorway_portal_forward_offset |  | -3 | sv, cl, rep, cheat
@@ -1048,6 +1054,7 @@ citadel_gun_boon_growth_vdata_tweak | Command to tweak boon gun damage growth. <
 citadel_gun_iron_sights_threshold | When iron sights amount is greater than this value, we are considered in iron sights mode. | 0.9 | devonly, sv, cl, rep
 citadel_gun_max_spread_penalty | Max spread penalty you can incur from taking damage | 5 | sv, cl, rep, cheat
 citadel_healthbars_enabled |  | true | cl, release
+citadel_hero_builds_universe |  |  | cl, a, release
 citadel_hero_card_fake_party_member_count |  | -1 | devonly, cl
 citadel_hero_challenge_status_fake_data | Shows fake data for hero challenge status | false | devonly, cl
 citadel_hero_demo_enable_fast_stamina | Do we enable fast stamina cooldowns | false | sv, cl, a, rep, release
@@ -1131,6 +1138,7 @@ citadel_hud_top_bar_enable_dynamic_player_position |  | true | devonly, cl
 citadel_hud_visible | Turns on/off rendering the HUD | true | cl, release
 citadel_idle_time | How long a player needs to be idle before he counts as disconnected. | 300 | devonly, sv
 citadel_idle_time_grace_period | How long a player needs to be idle we start putting that time towards their stored idle time. | 8 | devonly, sv
+citadel_in_world_item_panel_dpi | In-world texture resolution scale | 2 | devonly, cl
 citadel_inactive_time_grace_period | How long a player needs to be inactive (i.e. not taking any meaningful actions) before we start putting that time towards their stored inactive time. | 30 | devonly, sv
 citadel_increase_replay_speed | Increase the Replay speed while watching a replay | cmd | cl, release
 citadel_increment_killstreak | citadel_increment_killstreak \[player_slot\] \[first_blood\] | cmd | devonly, sv
@@ -1256,7 +1264,7 @@ citadel_movement_skyclip_push_distance |  | 196.85 | devonly, sv, cl, rep
 citadel_movement_skyclip_push_min_force |  | 400 | devonly, sv, cl, rep
 citadel_movement_slip_accel |  | 200 | devonly, sv, cl, rep
 citadel_movement_solver_iterations |  | 16 | devonly, sv, cl, rep
-citadel_movespeed_bonus_max | Maximum Value for Movespeed bonuses (Diminishing Returns) in Hu | 393.701 | devonly, sv, cl, rep
+citadel_movespeed_bonus_max | Maximum Value for Movespeed bonuses (Diminishing Returns) in Hu | 433.071 | devonly, sv, cl, rep
 citadel_mvp_calculate_now | Run the MVP calculation right now | cmd | devonly, sv
 citadel_mvp_enabled | -1 = force disabled, 0 = default, 1 = force enabled | 0 | devonly, sv
 citadel_mvp_score_kda_ratio | Use a KDA ratio for the mvp score instead of the real algorithm. | false | devonly, sv
@@ -1278,7 +1286,7 @@ citadel_new_years_fireworks_force_start |  | 0 | devonly, sv, cl, rep
 citadel_new_years_fireworks_test | Sets fireworks start time to be N seconds in the future. | cmd | sv, release
 citadel_news_entries_list_request_count |  | 10 | devonly, cl
 citadel_news_entries_seen |  |  | cl, a, release
-citadel_news_entry_override_latest |  | 519736513892714181 | devonly, cl
+citadel_news_entry_override_latest |  | 0 | devonly, cl
 citadel_no_orbs_on_hero_kill |  | true | sv, cl, rep, cheat
 citadel_no_orbs_on_objective_kill |  | true | sv, cl, rep, cheat
 citadel_npc_ag2_enable | Enable AG2 in NPCs | true | devonly, sv, rep, release
@@ -1474,7 +1482,6 @@ citadel_portrait_world_renderer_off |  | false | devonly, cl
 citadel_post_game_force_hero_id |  | cmd | devonly, cl
 citadel_post_game_local_player_screen_enabled |  | false | devonly, cl
 citadel_post_game_progress | -1 = force disabled, 0 = default, 1 = force enabled | 0 | devonly, cl
-citadel_post_game_progress_test_screen |  |  | devonly, cl
 citadel_post_game_progress_use_test_data |  | false | devonly, cl
 citadel_postgame_duration | How long postgame lasts until play of the game | 10 | sv, cheat
 citadel_powerup_initial_spawn_time_override | If positive, override initial spawn time (in seconds) for all powerup camps | -1 | devonly, sv
@@ -1515,6 +1522,7 @@ citadel_quick_cast_select_effects_delay |  | 0.1 | devonly, sv, cl, rep
 citadel_quick_response_display_time |  | 6 | devonly, cl
 citadel_quickbuy_auto_buy_default | Default for whether auto-buy is enabled in normal games. | false | cl, a, user
 citadel_quickbuy_enable | If enabled, show quickbuy in the HUD | true | cl, a
+citadel_quit_delay |  | 0.5 | devonly, cl
 citadel_radial_ability_suggestion_weight | How much extra weight to give a segment when it's the next recommended ability. | 0 | devonly, cl
 citadel_radial_distortion | 0: Off 1: Distorts the visible distribution of arcs based on the mouse pointer. | 0 | devonly, cl
 citadel_radial_distortion_growth_factor | When the cursor enters a radial arc fully, how much should it grow by (in terms of weight) | 1.25 | devonly, cl
@@ -1565,7 +1573,6 @@ citadel_server_long_frame_threshold_ms | How long a frame must stall before we m
 citadel_server_max_spectator_slots | The maximum number of spectator slots we allow. This is so that the GC can restrict this remotely if we need to. -1 disables this limit | 3 | sv, release
 citadel_server_mm_ignore_engine_version | Ignore engine build version. Useful for testing release locally | false | devonly, sv
 citadel_set_mmr | &lt;Account ID&gt; &lt;MMR&gt; Sets the MMR of the specified account | cmd | devonly, cl
-citadel_set_party_mode | Dispatches a request to change the party mode | cmd | devonly, cl
 citadel_set_server_convar | \[convar\] \[value\] Set a server convar on the server that the player is currently connected to | cmd | devonly, cl
 citadel_settings_dismissed_new_settings | New Settings which have already been dismissed by the user |  | cl, a
 citadel_settings_new_setting_newness_duration | Maximum age a new setting will be shown without dismissing | 2592000 | devonly, cl
@@ -1593,7 +1600,6 @@ citadel_show_disabled_heroes | Shows disabled heroes in hero selection | false |
 citadel_show_falloff_in_world |  | false | devonly, cl
 citadel_show_global_leaderboard | Show Global Leaderboards | false | cl, release
 citadel_show_hero_debut_popup | \[hero id\] \[allow swap\] | cmd | devonly, cl
-citadel_show_hero_lab_heroes | Show Hero Labs Heroes in hero grid | false | cl, a
 citadel_show_hero_select_popup |  | cmd | devonly, cl
 citadel_show_localization_errors |  | false | devonly, cl
 citadel_show_minimap_reveal_indicators |  | false | devonly, cl
@@ -1680,7 +1686,7 @@ citadel_stunme | Stun the local player | cmd | devonly, sv
 citadel_sub_nav_outer_radius_scaler |  | 0.412 | devonly, cl
 citadel_subnav_select_time |  | 0 | devonly, cl
 citadel_suggest_claim_reqs | Print a crude recommended required bullets to claim an orb for every hero | cmd | devonly, sv
-citadel_super_neutral_gold_reward |  | 2000 | devonly, sv
+citadel_super_neutral_gold_reward |  | 3000 | devonly, sv
 citadel_super_neutral_gold_reward_bonus_per_minute |  | 50 | devonly, sv
 citadel_super_neutral_inner_attack_range |  | 250 | devonly, sv
 citadel_super_neutral_middle_attack_range |  | 400 | devonly, sv
@@ -1773,8 +1779,10 @@ citadel_trooper_spawn_enabled | set to false to prevent any troopers from spawni
 citadel_trooper_spawn_initial | Initial trooper wave spawn time | 16 | devonly, sv
 citadel_trooper_spawn_interval |  |  | 
 citadel_trooper_spawn_interval_early | # of seconds between trooper spawn waves. | 30 | devonly, sv
-citadel_trooper_spawn_interval_late | # of seconds between trooper spawn waves. Starts after 25 minutes. | 25 | devonly, sv
+citadel_trooper_spawn_interval_late | # of seconds between trooper spawn waves.  | 25 | devonly, sv
 citadel_trooper_spawn_interval_late_time | # of minutes before we start using the late trooper spawn interval. | 20 | devonly, sv
+citadel_trooper_spawn_interval_very_late | # of seconds between trooper spawn waves. | 20 | devonly, sv
+citadel_trooper_spawn_interval_very_late_time | # of minutes before we start using the late trooper spawn interval. | 35 | devonly, sv
 citadel_trooper_spawn_wave_spread | # of seconds between troopers on a zipline in a single wave. | 0.4 | devonly, sv
 citadel_trooper_squad_size | How many troopers spawn together in a squad | 4 | devonly, sv
 citadel_trooper_stuck_detection_duration |  | 0.2 | devonly, sv
@@ -3366,7 +3374,6 @@ music_hideout_afk_timer_fade_in_duration_seconds | Fade in time once returning f
 music_hideout_afk_timer_fade_out_duration_seconds | Fade out time once AFK duration is exceeded. | 15 | devonly, cl
 music_hideout_debug_enabled | Displays music manager debug info for hideout. | false | devonly, cl
 music_log_abandoned_priorities | Prints a log message whenever low priority cues are discarded. | false | devonly, cl
-music_queue_match_intro_connecting | Triggers match intro connecting | false | devonly, cl
 music_resume_fade_time_seconds | When resuming, fades music in over this duration of time. | 2 | devonly, cl
 music_resume_window_seconds | Seeks into music if resumed during this period of time. | 15 | devonly, cl
 muzzle_flash_debug |  | false | devonly, cl
@@ -4012,6 +4019,7 @@ phys_dump_main_world | Dump physics main world to file | cmd | devonly, sv
 phys_dump_memory | Dump memory usage | cmd | devonly, sv
 phys_dynamic_scaling |  | true | sv, cl, rep, cheat
 phys_expensive_shape_threshold |  | 6 | cl, cheat
+phys_force_controller_debug |  | false | devonly, sv
 phys_highlight_expensive_objects | Highlight expensive physics objects | false | cheat
 phys_highlight_expensive_objects_strength | Highlight expensive physics objects strength | 0.02 | cheat
 phys_impactforcescale |  | 1 | devonly, sv
@@ -4396,7 +4404,7 @@ r_muzzleflashbrightness |  | 0.4 | cl, rep, cheat
 r_muzzleflashlinear |  | 0.05 | cl, rep, cheat
 r_nearz | Override the near clipping plane. -1 means use the default. | -1 | cl, cheat
 r_opaque |  | true | devonly, cl
-r_particle_allowprerender |  | true | devonly
+r_particle_allowprerender |  | false | devonly
 r_particle_batch_collections |  | false | devonly
 r_particle_cables_cast_shadows |  | true | devonly
 r_particle_cables_culling |  | 1 | devonly
