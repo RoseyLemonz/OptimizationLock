@@ -1,4 +1,4 @@
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.2 --------------- \\
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.1 --------------- \\
 		    // Check here for updates: https://gamebanana.com/mods/656341 \\
 		   // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
 		  // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
@@ -219,13 +219,11 @@ r_grass_end_fade 							"0"				// When to cull grass when far										[def: "30
 // ================ Creep AI ================
 cl_simulate_dormant_entities 				"false"
 ai_strong_optimizations_no_checkstand 		"1"				// Not fully sure what exactly this does, but I would imagine given the name of the convar it optimizes ai. [def: "0"]
+citadel_npc_force_animate_every_tick 		"false"
 
 // ================ In Testing ================
-
-citadel_npc_force_animate_every_tick 		"false"
 citadel_outer_radius_scaler 				"0.25"
 iv_parallel_restore 						"false"
-panorama_use_new_occlusion_invalidation 	"false"
 r_decals_default_fade_duration 				"1"
 r_texture_budget_update_period 				"0.5"
 save_parallel 								"true"

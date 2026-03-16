@@ -687,13 +687,11 @@ r_grass_end_fade 							"0"				// When to cull grass when far										[def: "30
 // ================ Creep AI ================
 cl_simulate_dormant_entities 				"false"
 ai_strong_optimizations_no_checkstand 		"1"				// Not fully sure what exactly this does, but I would imagine given the name of the convar it optimizes ai. [def: "0"]
+citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does what it says on the tin.				[def: "true"]
 
 // ================ In Testing ================
-
-citadel_npc_force_animate_every_tick 		"false"
 citadel_outer_radius_scaler 				"0.25"
 iv_parallel_restore 						"false"
-panorama_use_new_occlusion_invalidation 	"false"
 r_decals_default_fade_duration 				"1"
 r_texture_budget_update_period 				"0.5"
 save_parallel 								"true"
