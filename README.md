@@ -61,3 +61,6 @@ Major thanks to all of these individuals from the bottom of my heart. They are a
 - Piggy:         Let me mirror his config
 - Maihdenless:   Started the original OptimisationLock & its Discord
 (You can find Artemon121's cvar unhider [here](https://github.com/Artemon121/cvar-unhide-s2-citadel))
+
+----
+Please also consider checking out [this](https://github.com/Sqooky/Deadlock-Optimization-Resources) repository for optimization options external to the game.
