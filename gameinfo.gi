@@ -465,6 +465,8 @@
 
 	ConVars
 	{	 
+//		If you would like to donate as a means of showing thanks I have a kofi.		\\
+//		https://ko-fi.com/sqooky													\\
 
 // ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.3 --------------- \\
 		    // Check here for updates: https://gamebanana.com/mods/656341 \\
