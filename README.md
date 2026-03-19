@@ -3,6 +3,7 @@ If you would like to donate as a means of showing thanks I have a kofi [here](ht
 
 # Base Instructions
 To install the performance config replace the gameinfo.gi in ``steamapps/common/deadlock/game/citadel`` with the one downloaded from this repository.
+**There is a video tutorial** for installation avalible [here](https://youtu.be/TbjLbQVN2kE)
 
 # Table
 Here is a list of each config provided in this repository.
