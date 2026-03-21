@@ -831,16 +831,7 @@
 "sc_max_framebuffer_copies_per_layer" "0" //no idea what this does ngl
 "r_strip_invisible_during_sceneobject_update" "1" //Default: false<br>
 "fs_async_threads" "8"
-
-// ================ In Testing ================
-
 citadel_npc_force_animate_every_tick        "false"
-citadel_outer_radius_scaler                 "0.25"
-iv_parallel_restore                         "false"
-panorama_use_new_occlusion_invalidation     "false"
-r_decals_default_fade_duration                  "1"
-r_texture_budget_update_period                  "0.5"
-save_parallel                               "true"
 
 
 

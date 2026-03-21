@@ -48,9 +48,9 @@ the gameinfo.gi gets overwritten every major update. You need to manually replac
 - "I can't see players past a certain distance"  
 ``sv_pvs_max_distance`` comment it out  
 - "Can't see the Doorman ult indicator"  
-Set ``cl_ragdoll_limit`` to `` "-1"``
+Set ``cl_ragdoll_limit`` to `` "-1"``  
 - "There's holes in victor and paige at certain angles/sinners lights are little triangles"  
-Comment out ``sc_screen_size_lod_scale_override`` or increase the value.
+Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
 
 # Mod Support
 Every variation of the config included in this repository has mod support added. For those who wish to remove or add it back in, remove ``Game                citadel/addons`` From the searchpaths bracket.

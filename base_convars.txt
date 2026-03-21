@@ -271,6 +271,3 @@ violence_hgibs "false"
   // Piggy		       Let me mirror his config														       		\\
  // Sqooky		       Manager of the GitHub																   	 \\
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.3 ------------------------------- \\
-
-
-	/ --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.1 ------------------------------- \\
