@@ -36,7 +36,7 @@ Comment it out.
 - "What does commenting mean"  
 to comment a line put ``//`` at the front of the line. It will make it not executed by the config.  
 - "Why are my characters dark in the portraits on the end screen and shop"  
-``lb_enable_dynamic_lights`` comment it out.  
+``r_directlighting`` set it to ``true``.  
 - "Why are buildings popping in and out"  
 ``r_farz`` or ``r_maxtapents`` comment them out.  
 - "How do I change my fov"  
