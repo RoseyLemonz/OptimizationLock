@@ -468,26 +468,26 @@
 //		If you would like to donate as a means of showing thanks I have a kofi.		\\
 //		https://ko-fi.com/sqooky													\\
 
-// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.3 --------------- \\
+// ---------------- GAMEINFO CONFIG OptimizationLock -- ver. 1.4.4 --------------- \\
 		    // Check here for updates: https://gamebanana.com/mods/656341 \\
 		   // Downloaded from: https://github.com/Sqooky/OptimizationLock  \\
 		  // In-Depth Tutorial: https://www.youtube.com/watch?v=zC3wBYY98vU \\
 
 
 // Press ctrl+f and type * to highlight the more visually impactful commands that you could adjust
-// ================ PREFERENCES ================ 
+// ================ PREFERENCES ================
 
-// --- 1. Outlines --- 
+// --- 1. Outlines ---
 citadel_trooper_glow_disabled 				"0"				// 1 = Disable friendly/enemy minion glow. 							[def: "0"]
 citadel_boss_glow_disabled 					"1"				// Disables boss and walker glow/highlight effect. 					[def: "0]
 citadel_player_glow_disabled 				"0"				// Disables player glow/highlight effect when pinged. 				[def: "0"]
 r_citadel_npr_outlines_max_dist 			"1000"			// Limits outline distance to reduce unnecessary processing. 		[def: "1000"]
 
-// --- 2. Field of View --- 
+// --- 2. Field of View ---
 //r_aspectratio 							"2.60"			// 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 		[def: "0"]
 citadel_camera_hero_fov 					"110"			// The field of view angle of the camera when following a hero. 	[def: "90"]
 
-// --- 3. HUD --- 
+// --- 3. HUD ---
 citadel_unit_status_use_new 				"1"				// This uses new Health Bar, to use old Health Bar change "true" to "false". 	[def: "0"]
 //citadel_unit_status_use_v2 				"0"				// Set to 1 to enable the new health bar that allows you to  see enemy stamina. [def: "0"]
 //citadel_unit_status_use_v2_for_nonplayers "0"				// Set to 1 to enable the new health bar but for troopers, objs, and camps.		[def: "0"]
@@ -497,14 +497,12 @@ citadel_hideout_ball_show_juggle_count 		"1"				// Shows a fun juggle count mini
 citadel_hideout_ball_show_juggle_fx 		"1"				// Shows juggle visual FX for hideout ball minigame. 				[def: "0"]
 citadel_crosshair_hit_marker_duration		"-0.001"		// Removes the hitmarker when shooting people.					[def: "0.1"]
 
-
-
-// --- 4. Lighting & Shadows --- 
+// --- 4. Lighting & Shadows ---
 lb_enable_stationary_lights 				"1"				// *Disables stationary lights (map looks flatter but more performant). 		[def: "1"]
 lb_enable_dynamic_lights 					"0"				// *Disables dynamic lights eg. walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect) [def: "1"]
 lb_enable_baked_shadows 					"1"				// *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
 
-// --- 5. Skybox Rendering --- 
+// --- 5. Skybox Rendering ---
 r_drawskybox 								"1"				// *Enables drawing the 2D skybox (sky is plain black when off). 	[def: "1"]
 r_draw3dskybox 								"0"				//  Enables drawing the 3D skybox layer (distant geometry). 		[def: "1"]
 
@@ -585,14 +583,14 @@ cl_disable_ragdolls 						"0"				// Keep set to 0 - enabling this (enabling ragd
 ragdoll_parallel_pose_control 				"1"				// Multithreaded ragdoll handling, better performance (if ragdolls aren't disabled). [def: "0"]
 cl_ragdoll_limit 							"-1"			// Limit of how many ragdolls can be rendered at once. 				[def: "-1"]
 
-// ================ MODELS ================ 
+// ================ MODELS ================
 skeleton_instance_lod_optimization 			"1"				// Enables skeleton/animation LOD optimizations (less bone work for distant models). [def: "0"]
 enable_boneflex 							"0"				// Disables bone flexes (procedural facial/mesh flex drivers). 		[def: "1"]
 r_hair_ao 									"0"				// Disables hair ambient occlusion/shading pass. 					[def: "1"]
 cl_fasttempentcollision 					"1000"			// Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"]
 ik_final_fixup_enable 						"0"				// Disables final IK fixup pass (cheaper animations, potentially less accurate). [def: "1"]
 ik_fabrik_align_chain 						"0"				// Disables FABRIK chain alignment in IK (cheaper). 				[def: "1"]
-animgraph_enable_parallel_preupdate 		"1"				// Allows animgraph pre-update work to run in parallel (performance). [def: "0"] 
+animgraph_enable_parallel_preupdate 		"1"				// Allows animgraph pre-update work to run in parallel (performance). [def: "0"]
 animgraph_enable_parallel_op_evaluation 	"1"				// Allows animgraph operator evaluation to run in parallel (performance). [def: "0"]
 cloth_sim_on_tick 							"0"				// Update the cloth simulation every tick 							[def: "1"]
 phys_threaded_cloth_bone_update 			"1"				// Make the cloth update threaded 									[def: "0"]
@@ -600,7 +598,7 @@ phys_threaded_kinematic_bone_update 		"1"				// 																	[def: "0"]
 phys_threaded_transform_update 				"1"				// 																	[def: "0"]
 props_break_max_pieces_perframe				"0.5"			// Makes boxes break into single pieces								[def: "16"]
 
-// ================ ROPES ================ 
+// ================ ROPES ================
 r_drawropes 								"0"				// Draw ropes. 														[def: "1"]
 rope_collide 								"0"				// Disables rope collision simulation. 								[def: "1"]
 rope_subdiv 								"0"				// Sets rope subdivision (0 = minimal geometry). 					[def: "2"]
@@ -613,7 +611,7 @@ rope_smooth_minwidth 						"0"				// Disables rope minimum smoothing width. 				
 r_ropetranslucent 							"0"				// Disables translucent rope rendering. 							[def: "1"]
 r_particle_cables_cast_shadows 				"0"				// Disables shadow casting from cable/rope-like particle effects. [def: "1"]
 
-// ================ VISUAL CLARITY ================ 
+// ================ VISUAL CLARITY ================
 mat_colorcorrection 						"1"				// Disables/ Enables color correction (game looks less vibrant when off). [def: "1"]
 r_drawdecals 								"1"				// *Render decals. 												[def: "1"]
 r_decals 									"1"				// Maximum number of decals allowed. (lower = fewer bullet holes/blood/impact marks). [def: "2048"]
@@ -632,41 +630,40 @@ violence_hgibs 								"0"				// Disables human gibs. 											[def: "1"]
 violence_agibs 								"0"				// Disables alien/other gibs. 										[def: "1"]
 sc_clutter_enable 							"0"				// Disables clutter props, improves visibility & FPS. 				[def: "1"]
 
-// ================ NETWORK ================ 
+// ================ NETWORK ================
 //cl_updaterate 							"128"			// Client snapshot update rate requested from the server (higher = more frequent updates). 		[def: "128"]
 //cl_interp 								"0.01"			// Client-side interpolation time (smoothing delay) for rendering other players/entities. 		[def: 0]
 //cl_interp_ratio 							"1"				// Multiplier that affects interpolation time (often cl_interp_ratio / cl_updaterate). 				[def: "0"]
 //cl_smoothtime 							"0.01"			// Smooth client's view after prediction error over this many seconds (Lower = snappier but more abrupt, higher = smoother but floaty). [def: "0.2"]
 //cl_resend 								"15"			// Delay in seconds between reconnect attempts (higher = less frequent, helps avoid kicks/timeouts on unstable connections). [def: "0.5"]
 
-// ================ SYSTEM RELATED ================ 
+// ================ SYSTEM RELATED ================
 gpu_level 									"1"				// GPU level. 														[def: "3"]
 gpu_mem_level 								"1"				// GPU Memory level. 												[def: "2"]
 cpu_level 									"1"				// CPU level. 														[def: "2"]
+battery_saver 								"0"				// Disables battery saver mode (no automatic throttling). 		[def: "0"]
 //think_limit 								"0.001"			// Limits how much “think” time/entities can process per tick (CPU cap). [def: "10"]
 //^ *TODO I am going to need to test this to make sure lowering it doesn't cause problems.
 
-battery_saver 								"0"				// Disables battery saver mode (no automatic throttling). 		[def: "0"]
-
-// ================ INPUT ================ 
+// ================ INPUT ================
 cl_input_enable_raw_keyboard 				"1"				// Enables raw keyboard input handling (more direct input path).[def: "0"]
 
-// ================ PARTICLES ================ 
-//cl_particle_max_count 					"1500"			// If console is flooded with max particles exceeded warnings. 		[def: "0"]
-r_particle_max_size_cull 					"0"				// 0 = DO NOT remove large particles (to see ultimates!). 			[def: "1200"]
-r_particle_max_detail_level 				"0"				// The maximum detail level of particle to create. 					[def: "3"]
+// ================ PARTICLES ================
+cl_particle_max_count 						"1500"			// If console is flooded with max particles exceeded warnings. 		[def: "0"]
+//r_particle_max_size_cull 					"0"				// 0 = DO NOT remove large particles (to see ultimates!). 			[def: "1200"]
+r_particle_max_detail_level 				"1"				// The maximum detail level of particle to create. 					[def: "3"]
 particle_cluster_nodraw 					"1"				// Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
 r_physics_particle_op_spawn_scale 			"0"				// Prevents physics-based particle spawns. 							[def: "1"]
-r_particle_model_new8 						"0"				// Disables newer particle models. 									[def: "1"]
+//r_particle_model_new8 					"0"				// Not entirely sure what this does 								[def: "1"]
 r_RainParticleDensity 						"0"				// Density of Particle Rain 0-1. 									[def: "1"]
 r_world_wind_strength 						"0"				// Disables wind effects, cosmetic only. 							[def: "40"]
-cl_particle_sim_fallback_threshold_ms 		"5"				// If particle sim cost exceeds this (ms), the engine can fall back to cheaper particle simulation to avoid spikes. [def: "6"]
-//cl_particle_sim_fallback_base_multiplier 	"5"				// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is. (Higher = more aggressive). [def: "5"]
-cl_particle_fallback_multiplier 			"4"				// Multiplier for falling back to cheaper effects under load. 		[def: "0"]
-cl_particle_fallback_base 					"4"				// Base for falling back to cheaper effects under load. 		[def: "0"]
+cl_particle_sim_fallback_threshold_ms 		"0.1"				// If particle sim cost exceeds this (ms), the engine can fall back to cheaper particle simulation to avoid spikes. [def: "6"]
+cl_particle_sim_fallback_base_multiplier 	"500"				// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is. (Higher = more aggressive). [def: "5"]
+//cl_particle_fallback_multiplier 			"4"				// Multiplier for falling back to cheaper effects under load. 		[def: "0"]
+//cl_particle_fallback_base 					"4"				// Base for falling back to cheaper effects under load. 		[def: "0"]
 r_particle_skip_postsim 					"1"				// Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
 
-// ================ Lod & Culling ================			
+// ================ Lod & Culling ================
 sc_screen_size_lod_scale_override 			"0.56"			// Controls LOD scale. Lower values will have less polys			[def: "-1"]
 sc_instanced_mesh_lod_bias 					"15"			// Bias for LOD selection of instanced mesh				 			[def: "1.25"]
 sc_instanced_mesh_lod_bias_shadow 			"10"			// Bias for LOD selection of instanced meshes in shadowmaps 		[def: "1.75"]
@@ -700,14 +697,36 @@ ai_strong_optimizations_no_checkstand 		"1"				// Not fully sure what exactly th
 citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does what it says on the tin.				[def: "true"]
 
 // ================ In Testing ================
+// ================ Test group 2 ================
+citadel_camera_soft_collision_angle 360
+
+cl_batch_entity_list_ops_during_latch 		"true"
+citadel_damage_text_batching_window_ability "1000"
+sc_force_materials_batchable 				"true"
+r_particle_timescale 						"1.3"
+cl_particle_batch_mode 						"10"
+cl_particle_fallback_base 					"100"	// Base for falling back to cheaper effects under load. [def: "0"] 
+cl_particle_fallback_multiplier 			"100"	// Multiplier for falling back to cheaper effects under load. [def: "0"]
+cl_particle_sim_fallback_base_multiplier 	"500"	// How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"] 
+cl_particle_sim_fallback_threshold_ms 		"10"	// Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"] 
+r_draw_particle_children_with_parents 		"1"		// 
+r_late_particle_job_sync 					"true"	// 
+r_particle_batch_collections 				"true"	// 
+r_particle_cables_cast_shadows 				"false"	// 
+r_particle_max_detail_level 				"1"		// 
+r_particle_max_texture_layers 				"3"		// 
+r_particle_model_new 						"true"	// 
+
+// ================ Test group 1 ================ 
+r_particle_allowprerender                   "false"
 citadel_outer_radius_scaler 				"0.25"			//
 iv_parallel_restore 						"false"			//
 r_decals_default_fade_duration 				"1"				//
-r_texture_budget_update_period 				"0.5"			// 
+r_texture_budget_update_period 				"0.5"			//
 save_parallel 								"true"			// Absolutely no idea but typically paralell processing is good.
 snd_occlusion_bounces						"0"				// Probably limits occlusion
-r_particle_max_size_cull					"1200	"		// Insane convar I need to benchmark
-r_particle_model_per_thread_count			"32"			//
+r_particle_max_size_cull					"300"			// Insane convar I need to benchmark
+r_particle_model_per_thread_count			"6000"			//
 r_limit_particle_job_duration 				"true"			// Seems to help with particle clutter, although I am not sure.
 ai_async_queue_max_jobs 					"1"
 ai_gather_conditions_async 					"true"
@@ -718,8 +737,8 @@ r_async_compute_fog 						"true"
 sparseshadowtree_parallel_generation 		"true"
 sv_parallel_sendsnapshot 					"3"
 
-// =============== No Clue What These do But it's Probably Important. =============== 
-// =============== If you test these please report to me on your findings =============== 
+// =============== No Clue What These do But it's Probably Important. ===============
+// =============== If you test these please report to me on your findings ===============
 //r_pipeline_stats_flush_before_sleeping true
 //r_pipeline_stats_present_flush true
 //r_wait_on_present true
@@ -738,13 +757,12 @@ violence_hgibs "false"
      // Kaizuchaneru     While not directly invovled in the deveopment, they tested most cvars		       	 \\
     // Artemon121		Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game      \\
    // Jaden		      Nice guy and helped both test and support various newcomers						       \\
-  // Piggy		       Let me mirror his config														       		\\
+  // Piggy		       Let me mirror his config														    		\\
  // Sqooky		       Manager of the GitHub																   	 \\
-// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.3 ------------------------------- \\
+// --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.4 ------------------------------- \\
 
 
-
-		"rate"
+"rate"
 		{
 			"min"		"98304"
 			"default"	"786432"
