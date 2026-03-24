@@ -240,9 +240,9 @@ citadel_npc_force_animate_every_tick 		"false"			// Don't change this, it does w
 // ================ Test group 3 ================
 enable_priority_boost 						"true"
 engine_max_ticks_to_simulate 				"2"				// Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time.	[Def: "-1"]
-engine_allow_multiple_simulates_per_frame 	"true"			// Simulate more ticks when your fps is low, could be good?		[def: "false"]
+engine_allow_multiple_simulates_per_frame 	"false"			// Simulate more ticks when your fps is low, could be good?		[def: "false"]
 //cl_phys_enabled 							"false"			// You can disable physics and might see an improvement in framerate, however ragdolls will be buggy.	[def: "true"]
-cq_enable 									"false"			// Custom queuing (I belive) being enabled. Network jank I am testing
+cq_enable 									"true"			// Custom queuing (I belive) being enabled. Network jank I am testing, setting this to false can cause issues. [def: "true"]
 cl_phys_assume_fixed_tick_interval 			"false"			// Assume the client uses a fixed tickrate like the server (which may not always be true)actual [def: "true"]
 citadel_arrow_brightness 					"1"
 cl_interp_parallel 							"true"			// 

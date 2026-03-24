@@ -102,8 +102,8 @@
 	{
 		BetaUniverse
 		{
-			FakeLag			0
-			FakeLoss		0
+			FakeLag			40
+			FakeLoss		.1
 			//FakeReorderPct 0.05
 			//FakeReorderDelay 10
 			//FakeJitter "low"
@@ -154,7 +154,7 @@
 		RenderingPipeline
 		{
 			SupportsMSAA 0
-			DistanceField 0
+			DistanceField 1
 		}
 		PauseSinglePlayerOnGameOverlay 1
 		DefensiveConCommands 1
@@ -209,8 +209,8 @@
 		"SupportsDisplacementMapping" "0"
 		"SteamAudioEnabled"				"1"
 		"LatticeDeformerEnabled"		"1"
-		"ShadowAtlasWidth" "0"
-		"ShadowAtlasHeight" "0"
+		"ShadowAtlasWidth" "16384"
+		"ShadowAtlasHeight" "16384"
 		"TimeSlicedShadowMapRendering" "1"
 	}
 
@@ -246,7 +246,7 @@
 		// steps. Additionally this controls which builders are displayed in the hammer build dialog.
 		DefaultMapBuilders
 		{
-			"bakedlighting"	"0"	// Enable lightmapping during compile time		
+			"bakedlighting"	"1"	// Enable lightmapping during compile time		
 			"envmap"	"0" // turned off since it currently causes an assert and doesn't work due to some build issue
 			"nav"		"1"	// Generate nav mesh data
 		}
@@ -279,7 +279,7 @@
 		BakedLighting
 		{
 			Version 4
-			ImportanceVolumeTransitionRegion 0            // distance we transition from high to low resolution charts 
+			ImportanceVolumeTransitionRegion 512            // distance we transition from high to low resolution charts 
 			LightmapChannels
 			{
 				direct_light_shadows 1
@@ -380,34 +380,34 @@
 		"EnvironmentMapUseCubeArray" 	1
 		"EnvironmentMapCacheSizeTools"  300
 		BindlessSceneObjectDesc			CitadelBindlessDesc
-		GrassCastsShadows				0
+		GrassCastsShadows				1
 	}
 
 	SceneSystem
 	{
 		GpuLightBinner 1
-		FogCachedShadowAtlasWidth 0
-		FogCachedShadowAtlasHeight 0
-		FogCachedShadowTileSize 0
+		FogCachedShadowAtlasWidth 2048
+		FogCachedShadowAtlasHeight 2048
+		FogCachedShadowTileSize 128
 		GpuLightBinnerSunLightFastPath 1
-		CSMCascadeResolution 0
+		CSMCascadeResolution 2048
 		SunLightManagerCount 0
 		SunLightManagerCountTools 0
-		DefaultShadowTextureWidth 0
-		DefaultShadowTextureHeight 0
-		DynamicShadowResolution 0
+		DefaultShadowTextureWidth 6144
+		DefaultShadowTextureHeight 6144
+		DynamicShadowResolution 1
 
 		TransformTextureRowCount	1024
 		TransformTextureRowCountToolsMode 6144
 		SunLightMaxCascadeSize		4
 		SunLightShadowRenderMode	Depth
 		LayerBatchThresholdFullsort 20
-		NonTexturedGradientFog		0
+		NonTexturedGradientFog		1
 		// Temp till I can add support in citadel shaders
 		DisableLateAllocatedTransformBuffer 1
 		MinimumLateAllocatedVertexCacheBufferSizeMB 64
-		CubemapFog 0
-		VolumetricFog 0
+		CubemapFog 1
+		VolumetricFog 1
 		FrameBufferCopyFormat R11G11B10F
 		Tonemapping 0
 		
@@ -483,7 +483,8 @@ citadel_trooper_glow_disabled 				"0"				// 1 = Disable friendly/enemy minion gl
 citadel_boss_glow_disabled 					"1"				// Disables boss and walker glow/highlight effect. 					[def: "0]
 citadel_player_glow_disabled 				"0"				// Disables player glow/highlight effect when pinged. 				[def: "0"]
 r_citadel_npr_outlines_max_dist 			"250"			// Limits outline distance to reduce unnecessary processing. 		[def: "1000"]
-r_citadel_selection_outline2_alpha 			"0"
+r_citadel_selection_outline2_alpha 			"0.2"			// Outlines on enemy players and abilities on a scale of 0-1.		[def: "0.8"]
+r_citadel_npr_outlines 						"false"			// Enable outlines on enemy players.								[def: "true"]
 
 // --- 2. Field of View ---
 //r_aspectratio 							"2.60"			// 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov). 		[def: "0"]
@@ -770,8 +771,7 @@ sparseshadowtree_parallel_generation 		"true"
  // Sqooky		       Manager of the GitHub																   	 \\
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.4 ------------------------------- \\
 
-
-"rate"
+		"rate"
 		{
 			"min"		"98304"
 			"default"	"786432"
@@ -786,7 +786,7 @@ sparseshadowtree_parallel_generation 		"true"
 		"panorama_classes_perf_warning_threshold_ms" "0.75"
 
 		// Panorama - enable minidumps on JS exceptions
-		"panorama_js_minidumps" "0"
+		"panorama_js_minidumps" "1"
 		// Enable the render target cache optimization.
 		"panorama_disable_render_target_cache" "0"
 
@@ -873,7 +873,7 @@ sparseshadowtree_parallel_generation 		"true"
 
 		"snd_event_browser_focus_events" "true"
 
-		"cl_max_particle_pvs_aabb_edge_length" "70"
+		"cl_max_particle_pvs_aabb_edge_length" "100"
 		
 		// Allow aggregation of particles (for perf)
 		"cl_aggregate_particles" "true"
@@ -890,5 +890,3 @@ sparseshadowtree_parallel_generation 		"true"
 		"ShowLowAvailableVirtualMemoryMessageBox" "1"
 	}
 }
-
-
