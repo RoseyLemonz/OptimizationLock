@@ -1,20 +1,20 @@
 - // ================ CORE QUALITY ================
 - "gpu_level" "1"                     // Minimum Shader Details Level 0= high
 - "cpu_level" "1"                     // Minimum Effect Details Level
-"mat_set_shader_quality" "0"
+- "mat_set_shader_quality" "0"
 
 // ================ FOV ================
-//"r_aspectratio" "2.15"              // [ADJUST] FOV control: 1.33=70fov | 1.56=75fov | 1.75=80fov | 2.0=85fov | 2.15=90fov | 2.49=100fov | 3.0=110fov | 3.5=120fov
+- //"r_aspectratio" "2.15"              // [ADJUST] FOV control: 1.33=70fov | 1.56=75fov | 1.75=80fov | 2.0=85fov | 2.15=90fov | 2.49=100fov | 3.0=110fov | 3.5=120fov
 
 // ================ LIGHTING & SHADOWS ================
-"r_directlighting" "false"              //*
-"r_ssao" "false"                        //* Disable ambient occlusion
-"r_shadows" "0"                     //* [FPS IMPACT] 0=Off (max FPS) | 1=On (shadows enabled)
-"r_rendersun" "0"                   //*
-"lb_enable_shadow_casting" "0"      // [FPS IMPACT] 0=Off (shadows disabled, +FPS) | 1=On (shadow casting enabled)
-"lb_csm_draw_alpha_tested" "0"
-"lb_csm_draw_translucent" "0"
-"lb_barnlight_shadowmap_scale" "0.01" //default 0.5
+- "r_directlighting" "false"              //*
+- "r_ssao" "false"                        //* Disable ambient occlusion
+- "r_shadows" "0"                     //* [FPS IMPACT] 0=Off (max FPS) | 1=On (shadows enabled)
+- "r_rendersun" "0"                   //*
+- "lb_enable_shadow_casting" "0"      // [FPS IMPACT] 0=Off (shadows disabled, +FPS) | 1=On (shadow casting enabled)
+- "lb_csm_draw_alpha_tested" "0"
+- "lb_csm_draw_translucent" "0"
+- "lb_barnlight_shadowmap_scale" "0.01" //default 0.5
 "lb_csm_cascade_size_override" "0.25" //was 1
 "lb_dynamic_shadow_resolution_quantization" "32" //64
 "lb_csm_override_staticgeo_cascades_value" "0"
@@ -28,35 +28,34 @@
 "r_size_cull_threshold_shadow" "200" //Default: 100<br>Threshold of shadow map size percentage below which objects get culled
 "csm_max_shadow_dist_override" "0"
 "sc_cache_envmap_lpv_lookup" "false" //was true
-"cl_retire_low_priority_lights" "1"
-"sc_disable_spotlight_shadows" "1"
-"sc_disable_shadow_materials" "1"
-"cl_globallight_shadow_mode" "0"
-"lb_enable_dynamic_lights" "0"
+- "cl_retire_low_priority_lights" "1"
+- "sc_disable_spotlight_shadows" "1"
+- "cl_globallight_shadow_mode" "0"
+- "lb_enable_dynamic_lights" "0"
 "lb_enable_lights" "0" //was 1
-"lb_enable_stationary_lights" "0"         // Disable stationary lights
+- "lb_enable_stationary_lights" "0"         // Disable stationary lights
 "lb_max_visible_barn_lights_override" "1"
 "lb_max_visible_envmaps_override" "4" //default 4 DO NOT CHANGE OR IT BREAKS GAME
-"lb_ssss_samples" "0"
+- "lb_ssss_samples" "0"
 //"r_multiscattering" "0"                   // Disable multiscattering (only works with shadows disable)
 
 // ================ SPARSE SHADOW TREE ================
-"sparseshadowtree_enable_rendering" "0"
-"sparseshadowtree_disable_for_viewmodel" "1"
+- "sparseshadowtree_enable_rendering" "0"
+- "sparseshadowtree_disable_for_viewmodel" "1"
 
 // ================ DISTANCE FIELD ================
-"r_citadel_distancefield_farfield_enable" "false"
-"r_citadel_npr_outlines_max_dist" "600"
+- "r_citadel_distancefield_farfield_enable" "false"
+- "r_citadel_npr_outlines_max_dist" "600"
 
 // ================ FOG & ATMOSPHERE ================
-"r_enable_volume_fog" "0"
-"r_enable_gradient_fog" "0"
-"r_enable_cubemap_fog" "0"
-"volume_fog_intermediate_textures_hdr" "0"
+- "r_enable_volume_fog" "0"
+- "r_enable_gradient_fog" "0"
+- "r_enable_cubemap_fog" "0"
+- "volume_fog_intermediate_textures_hdr" "0"
 
 // ================ SKY & ENVIRONMENT ================
-"r_draw3dskybox" "0"
-"r_drawskybox" "1"                  // Set to 0 to disable skybox
+- "r_draw3dskybox" "0"
+- "r_drawskybox" "1"                  // Set to 0 to disable skybox
 "r_monitor_3dskybox" "0"
 "r_world_wind_strength" "0"
 "sv_waterdist" "0"
@@ -72,7 +71,7 @@
 "r_particle_max_detail_level" "0"
 "r_particle_cables_cast_shadows" "0"
 "r_RainParticleDensity" "0"
-"r_physics_particle_op_spawn_scale" "0"
+- "r_physics_particle_op_spawn_scale" "0"
 "r_particle_max_size_cull" "1600" //was 800 Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway
 "particle_cluster_nodraw" "1"
 "r_particle_mixed_resolution_viewstart" "800"
@@ -128,8 +127,8 @@
 "cl_eye_yaw_multiplier" "0"
 
 // ================ LOD & CULLING ================
-"sc_instanced_mesh_lod_bias" "15"     // [FPS IMPACT] Higher = lower quality models, more FPS | 0=High quality | 10=Low quality
-"sc_instanced_mesh_lod_bias_shadow" "10" // Bias for LOD selection of instanced meshes in shadowmaps
+- "sc_instanced_mesh_lod_bias" "15"     // [FPS IMPACT] Higher = lower quality models, more FPS | 0=High quality | 10=Low quality
+- "sc_instanced_mesh_lod_bias_shadow" "10" // Bias for LOD selection of instanced meshes in shadowmaps
 "sc_instanced_mesh_motion_vectors" "0" // Set 1 if you use motion blur
 "sc_instanced_mesh_size_cull_bias" "10" // Bias for size culling of instanced meshes
 "sc_instanced_mesh_size_cull_bias_shadow" "10" // Bias for size culling instanced meshes in shadowmaps
@@ -197,31 +196,31 @@
 "ai_expression_optimization" "1"
 
 // ================ AUDIO ================
-"audio_enable_vmix_mastering" "0"     // [FPS IMPACT] 0=Off (saves CPU, +FPS) | 1=On (audio mastering enabled)"
+- "audio_enable_vmix_mastering" "0"     // [FPS IMPACT] 0=Off (saves CPU, +FPS) | 1=On (audio mastering enabled)"
 "dsp_volume" "0"                    // idk
-"snd_occlusion_bounces" "0"
-"snd_steamaudio_num_threads" "4"     // [ADJUST] Audio thread count - 1=Low CPU usage | Higher = better audio quality, more CPU By default, it might only use 1 thread. Increasing this allows the heavy sound math to spread out, preventing it from stalling the main game loop during loud teamfights
-"snd_mix_async" "1"
-"soundsystem_update_async" "1"
+- "snd_occlusion_bounces" "0"
+- "snd_steamaudio_num_threads" "4"     // [ADJUST] Audio thread count - 1=Low CPU usage | Higher = better audio quality, more CPU By default, it might only use 1 thread. Increasing this allows the heavy sound math to spread out, preventing it from stalling the main game loop during loud teamfights
+- "snd_mix_async" "1"
+- "soundsystem_update_async" "1"
 
 // ================ TEXTURE STREAMING ================
 "r_texture_pool_size" "256"           // [ADJUST] VRAM usage in MB - Lower = less VRAM used, may cause texture pop-in | 512-1024 range
-"r_texture_stream_mip_bias" "4"         // [FPS IMPACT] Higher = blurrier textures, more FPS | 0=High quality | 2=Balanced | 4=Low quality
+- "r_texture_stream_mip_bias" "4"         // [FPS IMPACT] Higher = blurrier textures, more FPS | 0=High quality | 2=Balanced | 4=Low quality
 "r_texture_lod_scale" "4"               // [FPS IMPACT] 0=High quality (sharp) | 2=Medium | 4=Low quality (blurry, max FPS)
 "r_fallback_texture_lod_scale" "4"
 "r_texture_budget_update_period" "0.5" // Faster texture streaming adjustment 0.05
 "r_texture_pool_reduce_rate" "512"
 
 // ================ MEMORY BUDGET ================
-"r_texture_budget_dynamic" "1"          // Dynamic texture budget adjustment
-"r_texture_budget_threshold" "0.8"
+- "r_texture_budget_dynamic" "1"          // Dynamic texture budget adjustment
+- "r_texture_budget_threshold" "0.8"
 
 // ================ SHADER & RENDERING ================
-"mat_async_shader_load" "1"
-"r_renderdoc_auto_shader_pdbs" "0"
+- "mat_async_shader_load" "1"
+- "r_renderdoc_auto_shader_pdbs" "0"
 "sc_hdr_enabled_override" "0"
-"r_texturefilteringquality" "0"
-"r_max_portal_render_targets" "2"   // Set how many amount to render portals
+- "r_texturefilteringquality" "0"
+- "r_max_portal_render_targets" "2"   // Set how many amount to render portals
 "mat_colcorrection_disableentities" "0" // Disable map color-correction entities
 "r_gbuffer_disable_npr_lighting" "true"
 "r_citadel_npr_outlines" "false"
@@ -364,5 +363,4 @@
 "phys_expensive_shape_threshold" "100" //was 6
 "sc_max_framebuffer_copies_per_layer" "0" //no idea what this does ngl
 "r_strip_invisible_during_sceneobject_update" "1" //Default: false<br>
-"fs_async_threads" "8"
 citadel_npc_force_animate_every_tick        "false"

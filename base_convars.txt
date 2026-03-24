@@ -93,6 +93,7 @@ cl_globallight_shadow_mode                  "0"             // \\               
 lb_csm_draw_alpha_tested                    "0"             // Prevents alpha-tested geometry from being included in CSM passes (cheaper, possible missing leaf/fence shadows). [def: "1"]
 lb_csm_draw_translucent                     "0"             // Prevents translucent objects from rendering into CSM (cheaper, fewer shadow details). [def: "1"]
 lb_enable_shadow_casting                    "0"             // Disables baked shadows I believe                                 [def: "1"]
+lb_ssss_samples                             "1"             // Subsurface sample count                                          [def: "11"]
 
 // ================ LIGHTING ================
 r_directlighting                            "false"         // Set to true to have your characters not be black in the shop     [def:"true"]
@@ -112,6 +113,9 @@ r_citadel_ssao_thin_occluder_compensation   "0"             // Disables special 
 mat_set_shader_quality                      "0"             // Force shader quality setting (valid values are 0 or 1).          [def: null]
 r_distancefield_enable                      "0"             // Disables/ Enables distance-field system (used by some lighting/shadowing/occlusion features). [def: "1"]
 r_citadel_distancefield_farfield_enable     "0"             // Disables long-range distance field effects.                      [def: "1"]
+
+"r_citadel_distancefield_farfield_enable" "false"
+"r_citadel_npr_outlines_max_dist" "600"
 
 // ================ RAGDOLLS ================
 cl_disable_ragdolls                         "0"             // Keep set to 0 - enabling this (enabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
@@ -163,6 +167,8 @@ violence_ablood                             "0"             // Disables alien/ot
 violence_hgibs                              "0"             // Disables human gibs.                                             [def: "1"]
 violence_agibs                              "0"             // Disables alien/other gibs.                                       [def: "1"]
 sc_clutter_enable                           "0"             // Disables clutter props, improves visibility & FPS.               [def: "1"]
+
+"volume_fog_intermediate_textures_hdr"      "0"
 
 // ================ NETWORK ================
 //cl_updaterate                             "128"           // Client snapshot update rate requested from the server (higher = more frequent updates).      [def: "128"]
@@ -219,6 +225,7 @@ phys_cull_internal_mesh_contacts            "true"          //                  
 citadel_use_pvs_for_players                 "true"          // Default culls players when out of view                           [def: "false"]
 
 // ================ Misc ================
+r_low_latency                               "1"             // Depends on if your hardware supports it I believe                [def: "1"]
 r_max_portal_render_targets                 "2"             // Maxium number of Doorman doors to allow rendering.               [def: "0"]
 
 // =============== Gibs. In Testing to See if it Makes Troopers not Explode ===========
@@ -236,6 +243,18 @@ ai_strong_optimizations_no_checkstand       "1"             // Not fully sure wh
 citadel_npc_force_animate_every_tick        "false"         // Don't change this, it does what it says on the tin.              [def: "true"]
 
 // ================ In Testing ================
+
+// ================ Audio ================
+snd_occlusion_bounces                       "0"             // Probably limits occlusion
+audio_enable_vmix_mastering                 "false"         // [def: "true"]
+snd_steamaudio_num_threads                  "3"             // Audio thread count [def: "4"]
+// README This probably depends on how good your cpu is, the better it is the more threads you can allow
+
+// ================ Test Group 4 ================
+r_texturefilteringquality                   "3"             // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
+r_texture_stream_mip_bias                   "1"             // Worth adjusting, practically how good your textures will look.
+r_texture_budget_threshold                  "0.7"           // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
+r_renderdoc_auto_shader_pdbs                "false"         // Automatically generate shader debug info on capture. [def: "true"]
 
 // ================ Test group 3 ================
 enable_priority_boost                       "true"
@@ -270,7 +289,6 @@ iv_parallel_restore                         "false"         //
 r_decals_default_fade_duration              "1"             //
 r_texture_budget_update_period              "0.5"           //
 save_parallel                               "true"          // Absolutely no idea but typically paralell processing is good.
-snd_occlusion_bounces                       "0"             // Probably limits occlusion
 r_particle_model_per_thread_count           "6000"          //
 r_limit_particle_job_duration               "true"          // Seems to help with particle clutter, although I am not sure.
 ai_async_queue_max_jobs                     "1"

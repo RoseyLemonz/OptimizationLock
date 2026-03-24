@@ -689,7 +689,7 @@
 "r_texturefilteringquality" "0"
 "r_max_portal_render_targets" "2"   // Set how many amount to render portals
 "mat_colcorrection_disableentities" "0" // Disable map color-correction entities
-"r_gbuffer_disable_npr_lighting" "true"
+r_citadel_disable_npr_lighting true
 "r_citadel_npr_outlines" "false"
 
 // test
