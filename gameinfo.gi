@@ -759,7 +759,6 @@ save_parallel                               "true"          // Absolutely no ide
 r_particle_model_per_thread_count           "48"          //
 r_limit_particle_job_duration               "true"          // Seems to help with particle clutter, although I am not sure.
 ai_async_queue_max_jobs                     "1"
-
 ai_gather_conditions_async                  "true"
 ai_use_async_ragdoll_fixup                  "true"
 mat_async_shader_load                       "true"
