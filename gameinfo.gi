@@ -385,6 +385,7 @@
 
     SceneSystem
     {
+
         GpuLightBinner 1
         FogCachedShadowAtlasWidth 0
         FogCachedShadowAtlasHeight 0
@@ -478,16 +479,16 @@
 // ================ PREFERENCES ================
 
 // --- 1. Outlines ---
-citadel_trooper_glow_disabled               "0"             // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
+citadel_trooper_glow_disabled               "1"             // 1 = Disable friendly/enemy minion glow.                          [def: "0"]
+citadel_damage_offscreen_indicator_disabled "false"         // The little trooper portraits that show up behind walls.          [def: "true"]
 citadel_boss_glow_disabled                  "1"             // Disables boss and walker glow/highlight effect.                  [def: "0]
 citadel_player_glow_disabled                "0"             // Disables player glow/highlight effect when pinged.               [def: "0"]
-r_citadel_npr_outlines_max_dist             "1"           // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
+r_citadel_npr_outlines_max_dist             "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
 r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
 r_citadel_npr_outlines                      "false"         // Enable outlines on enemy players.                                [def: "true"]
 r_citadel_npr_force_solid_outline           "true"
 
 // --- 2. Field of View ---
-//r_aspectratio                             "2.60"          // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).      [def: "0"]
 citadel_camera_hero_fov                     "110"           // The field of view angle of the camera when following a hero.     [def: "90"]
 
 // --- 3. HUD ---
@@ -777,7 +778,7 @@ sparseshadowtree_parallel_generation        "true"
 
          //CREDITS
         // Sqooky              Manager of the GitHub                                                      \\
-       // Dacoder_      Responsible for ver. 1.3.2 and documentation                                       \\
+       // Dacooder      Responsible for ver. 1.3.2 and documentation                                       \\
       // Brullee        Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
      // Kaizuchaneru    While not directly invovled in the deveopment, they tested most cvars                \\
     // Artemon121       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game      \\
