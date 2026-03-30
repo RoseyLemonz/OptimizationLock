@@ -250,19 +250,36 @@ snd_mixahead                                "0.05"          // Adds some latency
 // README This ^ probably depends on how good your cpu is, the better it is the more threads you can allow
 snd_soundmixer_version                      "1"             // [def: "2"]
 
-// wug wug (big tests)
+// ================ Test Convars ================
+// ================ Test Group 1 ================
+csm_cascade0_override_dist "0"
+csm_cascade1_override_dist "0"
+csm_cascade2_override_dist "0"
+csm_cascade3_override_dist "0"
+csm_max_dist_between_caster_and_receiver "0"
+csm_max_num_cascades_override "0"
+csm_max_shadow_dist_override  "1"
+csm_max_visible_dist "0"
+csm_res_override_0 "1"
+csm_res_override_1 "1"
+csm_res_override_2 "1"
+csm_res_override_3 "1"
+csm_viewmodel_shadows "false" 
+r_citadel_depth_prepass_dynamic_objects     "false"
+citadel_unit_status_allies_see_thru_walls_max_distance "40"
+citadel_unit_status_old_update_rate         "15"
+snd_steamaudio_reverb_order_rendering       "0"
+
+
+// ================ Needs to be Documented but is Stable Group 4 ================
 sv_parallel_checktransmit                   "1"
 cl_enable_eye_occlusion                     "false"
-
-// ================ EVERYTHING BELOW THIS IS STABLE YAY ================
-
-// ================ Test Group 4 ================
 r_texturefilteringquality                   "3"             // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 r_texture_stream_mip_bias                   "1"             // Worth adjusting, practically how good your textures will look.
 r_texture_budget_threshold                  "0.7"           // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
 r_renderdoc_auto_shader_pdbs                "false"         // Automatically generate shader debug info on capture. [def: "true"]
 
-// ================ Test group 3 ================
+// ================ Needs to be Documented but is Stable Group 3 ================
 enable_priority_boost                       "true"
 engine_max_ticks_to_simulate                "2"             // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [Def: "-1"]
 engine_allow_multiple_simulates_per_frame   "false"         // Simulate more ticks when your fps is low, could be good?     [def: "false"]
@@ -274,13 +291,13 @@ cl_interp_parallel                          "true"          //
 cl_modifier_parallel_gather_status_effect_updates   "true"  // 
 parallel_perform_invalidate_physics         "true"          // 
 
-// ================ Test group 2 ================
+// ================ Needs to be Documented but is Stable Group 2 ================
 citadel_camera_soft_collision_angle         "360"
 cl_batch_entity_list_ops_during_latch       "true"
 citadel_damage_text_batching_window_ability "1000"
 sc_force_materials_batchable                "true"
 
-// ================ Test group 1 ================ 
+// ================ Needs to be Documented but is Stable Group 1 ================ 
 r_particle_allowprerender                   "false"
 citadel_outer_radius_scaler                 "0.25"          //
 iv_parallel_restore                         "false"         //
