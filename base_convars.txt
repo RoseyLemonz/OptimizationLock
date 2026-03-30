@@ -18,7 +18,7 @@ citadel_player_glow_disabled                "0"             // Disables player g
 r_citadel_npr_outlines_max_dist             "1"             // Limits outline distance to reduce unnecessary processing.        [def: "1000"]
 r_citadel_selection_outline2_alpha          "0.2"           // Outlines on enemy players and abilities on a scale of 0-1.       [def: "0.8"]
 r_citadel_npr_outlines                      "false"         // Enable outlines on enemy players.                                [def: "true"]
-r_citadel_npr_force_solid_outline           "true"
+r_citadel_npr_force_solid_outline           "false"         // Causes odd visual bugs with statues and neutrals when set to true    [def: "false"]
 
 // --- 2. Field of View ---
 citadel_camera_hero_fov                     "110"           // The field of view angle of the camera when following a hero.     [def: "90"]
