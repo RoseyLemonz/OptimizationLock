@@ -638,8 +638,6 @@ r_particle_max_size_cull                    "999"           // Particle systems 
 r_particle_max_detail_level                 "1"             // The maximum detail level of particle to create.                  [def: "3"]
 particle_cluster_nodraw                     "1"             // Skips drawing particle “clusters”/grouped particle batches (performance, fewer small effects). [def: "0"]
 r_physics_particle_op_spawn_scale           "0"             // Prevents physics-based particle spawns.                          [def: "1"]
-r_particle_model_new8                       "false"         // Not entirely sure what this does                                 [def: "true"]
-r_particle_model_new                        "true"          // Use new particles I'd imagine? not sure though.                  [def: "false"]
 r_RainParticleDensity                       "0"             // Density of Particle Rain 0-1.                                    [def: "1"]
 r_world_wind_strength                       "0"             // Disables wind effects, cosmetic only.                            [def: "40"]
 cl_particle_fallback_base                   "10"            // Base for falling back to cheaper effects under load.             [def: "0"] 
@@ -664,9 +662,9 @@ sc_instanced_mesh_motion_vectors            "0"             // Set 1 if you use 
 sc_instanced_mesh_size_cull_bias_shadow     "10"            // Bias for size culling instanced meshes in shadowmaps             [def: "2"]
 sc_fade_distance_scale_override             "100"           // Distance objects fade in and out                                 [def: "-1"]
 sc_clutter_enable                           "false"         // No debris/props 1=Props visible                                  [def: "true"]
-sc_aggregate_bvh_threshold                  "16"            // Lower BVH threshold                                              [def: "128"]
-sc_layer_batch_threshold                    "16"            // Lower batch threshold                                            [default: "128"]
-sc_layer_batch_threshold_fullsort           "20"            //                                                                  [def: "80"]
+sc_aggregate_bvh_threshold                  "128"            // Lower BVH threshold                                              [def: "128"]
+sc_layer_batch_threshold                    "128"            // Lower batch threshold                                            [default: "128"]
+sc_layer_batch_threshold_fullsort           "80"            //                                                                  [def: "80"]
 r_farz                                      "7000"          // Override the far clipping plane                                  [def: "-1"]
 r_mapextents                                "7000"          // Far clipping plane, this will make buildings pop in and out      [def: "16384"] damn that's an oddly specific number
 mat_viewportscale                           "0.01"          // Scale down the main viewport I belive this gets overwritten by video.txt [def: "1"]
@@ -723,7 +721,6 @@ snd_steamaudio_reverb_order_rendering       "0"
 
 
 // ================ Needs to be Documented but is Stable Group 4 ================
-cl_enable_eye_occlusion                     "false"
 r_texturefilteringquality                   "3"             // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 r_texture_stream_mip_bias                   "1"             // Worth adjusting, practically how good your textures will look.
 r_texture_budget_threshold                  "0.7"           // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
@@ -910,3 +907,4 @@ r_drawskybox                                "true"          // Can't be changed 
         "ShowLowAvailableVirtualMemoryMessageBox" "1"
     }
 }
+
