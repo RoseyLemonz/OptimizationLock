@@ -47,20 +47,20 @@ Press ctrl+f in your text editor and type in the string you want.
 Comment it out.  
 - "What does commenting mean"  
 to comment a line put ``//`` at the front of the line. It will make it not executed by the config.  
-- "Why are my characters dark in the portraits on the end screen and shop"  
-``r_directlighting`` set it to ``true``.  
+- "Why are my characters dark in the portraits on the end screen and shop"
+``lb_enable_dynamic_lights`` set it to true
 - "Why are buildings popping in and out"  
-``r_farz`` or ``r_maxtapents`` comment them out.  
+``r_farz`` and ``r_maxtapents`` comment them out.  
 - "How do I change my fov"  
 ``citadel_camera_hero_fov`` Comment this out or lower the value.  
 - "The config broke this patch"  
 the gameinfo.gi gets overwritten every major update. You need to manually replace it again.  
-- "I can't see trooper healthbars and boxes past a certain distance"  
-``r_size_cull_threshold "0.7"``  comment this out.  
-- "I can't see players past a certain distance"  
-``sv_pvs_max_distance`` comment it out  
+- "I can't see boxes past a certain distance"  
+``r_size_cull_threshold "0.9"``  comment this out.  
 - "Can't see the Doorman ult indicator"  
 Set ``cl_ragdoll_limit`` to `` "-1"``  
+- "I can't see trooper healthbars past a certain distance"  
+Comment out ``sc_fade_distance_scale_override``  
 - "There's holes in victor and paige at certain angles/sinners lights are little triangles"  
 Comment out ``sc_screen_size_lod_scale_override`` or increase the value.  
 
@@ -69,15 +69,18 @@ Every variation of the config included in this repository has mod support added.
 
 # Credits
 Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
-- Sqooky:        Manager of the GitHub
-- Dacooder:      Responsible for ver. 1.3.2 and documentation
-- Brullee:       Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config
-- Kaizuchaneru:  While not directly invovled in the deveopment, they tested most cvars
-- Artemon121:    Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game
-- Jaden:         Nice guy and helped both test and support various newcomers
-- Piggy:         Let me mirror his config
-- Tamara Mochaccina Contributed vindicta scope fix and the fog fix
-- Maihdenless:   Started the original OptimisationLock & its Discord
+- Sqooky:           Manager of the GitHub.  
+- JasperP:          My personal hero.  
+- Boot:             Provided the csm cvars which had a notable performance improvement.  
+- Kin:              Did an insane amount of benchmarking unprompted.  
+- Dacooder:         Responsible for ver. 1.3.2 and documentation  
+- Brullee:          Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config  
+- Kaizuchaneru:     While not directly invovled in the deveopment, they tested most cvars  
+- Artemon121:       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.  
+- Jaden:            Nice guy and helped both test and support various newcomers.  
+- Piggy:            Let me mirror his config.  
+- Tamara Mochaccina Contributed vindicta scope fix and the fog fix.  
+- Soulx:            Gave me five dollars (fucking sick I love you)  
 (You can find Artemon121's cvar unhider [here](https://github.com/Artemon121/cvar-unhide-s2-citadel))
 
 ----

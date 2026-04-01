@@ -776,16 +776,20 @@ r_citadel_npr_force_solid_outline           "false"         // Causes odd visual
 r_drawskybox                                "true"          // Can't be changed anymore                                             [def: "true"]
 
 
-          // Convars end
-         //CREDITS
-        // Sqooky              Manager of the GitHub                                                      \\
-       // Dacooder      Responsible for ver. 1.3.2 and documentation                                       \\
-      // Brullee        Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config   \\
-     // Kaizuchaneru    While not directly invovled in the deveopment, they tested most cvars                \\
-    // Artemon121       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game      \\
-   // Jaden             Nice guy and helped both test and support various newcomers                            \\
-  // Piggy              Let me mirror his config                                                                \\
- // Tamara Mochaccina   Made the vindicta scope mod and contributed the fog fix                                  \\
+//Major thanks to all of these individuals from the bottom of my heart. They are all lovely.
+//- Sqooky:           Manager of the GitHub.  
+//- JasperP:          My personal hero.  
+//- Boot:             Provided the csm cvars which had a notable performance improvement.  
+//- Kin:              Did an insane amount of benchmarking unprompted.  
+//- Dacooder:         Responsible for ver. 1.3.2 and documentation  
+//- Brullee:          Removed fake cvars, redundant commands, added cvarlist.md, and reformatted config  
+//- Kaizuchaneru:     While not directly invovled in the deveopment, they tested most cvars  
+//- Artemon121:       Made the Citadel cvar unhider, which helped Abdalla fetch cvars and test in-game.  
+//- Jaden:            Nice guy and helped both test and support various newcomers.  
+//- Piggy:            Let me mirror his config.  
+//- Tamara Mochaccina Contributed vindicta scope fix and the fog fix.  
+//- Maihdenless:      Started the original OptimisationLock & its Discord.  
+//- Soulx:            Gave me five dollars (fucking sick I love you)
 // --------------------------------- END OF CONFIG OptimizationLock -- ver. 1.4.8 ------------------------------- \\
 
         "rate"
